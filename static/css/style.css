@@ -1,0 +1,274 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap');
+
+html {
+  height: 110vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.widthhundred {
+  width: 100%;
+}
+
+section {
+  margin: 100px 0;
+}
+
+
+.heighthundred {
+  height: 100%;
+}
+
+.backgroundLightGreen {
+  background-color: #94bb44;
+}
+
+.colorWhite {
+  color: white;
+}
+
+.backgroundDarkSea {
+  background-color: #004a4d;
+}
+
+/* Breadcrumbs CSS */
+:root {
+  --pink-50: #ebd2d2;
+  --pink-100: #920d0d75;
+  --pink-400: #920d0e;
+  --pink-700: #000000;
+}
+
+.breadcrumbs {
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  /* margin-bottom: 100px; */
+  background: var(--pink-50);
+  padding: 6px 14px;
+  /* border-radius: 0.5rem; */
+  /* box-shadow: 0 0 20px var(--pink-50); */
+}
+
+.breadcrumbs-item {
+  padding: 0.3rem 0.3rem 0.3rem 1rem;
+  background: var(--pink-100);
+  color: var(--pink-700);
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  letter-spacing: .5px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.breadcrumbs-item::before,
+.breadcrumbs-item::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0.75rem;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.breadcrumbs-item::before {
+  background: var(--pink-50);
+}
+
+.breadcrumbs-item::after {
+  left: 100%;
+  background: var(--pink-100);
+}
+
+.breadcrumbs-item:first-child {
+  padding: 0.3rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.breadcrumbs-item:first-child::before {
+  display: none;
+}
+
+.breadcrumbs-item:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.breadcrumbs-item:last-child::after {
+  display: none;
+}
+
+.breadcrumbs-item:hover,
+.breadcrumbs-item:hover::after {
+  background-color: rgba(146, 13, 14, 0.3);
+  color: #000;
+}
+
+.breadcrumbs-active,
+.breadcrumbs-active:hover {
+  background-color: #920d0e;
+  color: #fff;
+}
+
+/* Breadcrumbs CSS End */
+
+/* Main Page CSS */
+.main {
+  width: 100%;
+  height: 66vh;
+  display: flex;
+  align-items: center;
+}
+
+/* News & Links Section CSS */
+.NewsDialogBox {
+  border: 1px solid #920d0e;
+  border-radius: 8px;
+}
+
+.News {
+  background-color: #ebd2d240;
+  margin: 12px;
+  padding: 12px;
+}
+
+.NL_Heading h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #3c3c3c;
+  padding: 4px 0;
+}
+
+.NL_Heading {
+  background-color: #ebd2d2;
+  border-radius: 8px 8px 0 0;
+}
+
+.NewsSubHeading {
+  font-size: 16px;
+  font-weight: 500;
+  color: #606060;
+}
+
+.NewsSubject {
+  font-size: 13px;
+}
+
+.NewsPostedData {
+  font-size: 14px;
+  color: #909090;
+}
+
+.NewsPostedData a {
+  color: #920d0e90;
+}
+
+.NewsPostedData a:hover {
+  color: #920d0e;
+}
+
+.defaultersHeading{
+  font-size: 3.2rem;
+  color: #920d0e;
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+/* News & Links Section CSS end */
+
+/* Form Links Section CSS */
+
+
+
+
+.link {
+  margin-bottom: 24px;
+}
+
+.subSections a {
+  text-decoration: none;
+}
+
+.link {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 100px 8px 12px;
+  border: 1px solid #920d0e;
+  border-radius: 5px;
+  background-color: #ebd2d240;
+}
+
+.link:hover {
+  color: #920d0e;
+  border: 2px solid #920d0e;
+  padding: 7.25px 99.5px 7.25px 11px;
+  background-color: #ebd2d2;
+}
+
+.link i {
+  font-size: 22px;
+}
+
+.linksPrevious {
+  margin-bottom: 20px;
+}
+
+.acc {
+  /* height:50vh; */
+  margin: 0rem auto -8rem;
+}
+
+/* Form Links Section CSS end */
+
+
+/* Main Page CSS End*/
+
+
+/* Footer CSS */
+footer {
+  position: fixed;
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+ 
+}
+
+.footerColor {
+  background-color: #920d0e;
+}
+
+/* Footer CSS End */
+
+/* Media Queries for responsiveness */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 575px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .link {
+    padding: 8px 75px 8px 12px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+

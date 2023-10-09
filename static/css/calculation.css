@@ -1,0 +1,113 @@
+/* calc is for the whole form */
+.calc{
+     background-color:#920d0d9f;
+    /*background-image: linear-gradient(to bottom,rgba(214, 45, 45, 0.856),#b31717da); */
+ 
+    
+    justify-content: center;
+    align-items: center;
+  
+    color: #ffffff;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* position: absolute; */
+    clear: both;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+}
+/* this is for the navbar */
+.header{
+    margin-top: 0;
+    margin-bottom: auto;
+}
+/* method is the price recovery section  */
+.method{
+  width:fit-content;
+    margin-bottom: 10px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  
+}
+/* this the title input in the form */
+.right .ttl{
+    position: relative;
+}
+/* this is the edition input in the form*/
+.left .editioni{
+    position: relative;
+}
+/* this is the css for all input with that have a textbox in the form  */
+input[type=text]{
+position: relative;
+    border-radius: 6px;
+    /* background-color: rgba(114, 112, 112, 0.425);
+    background-image: linear-gradient(to right, rgb(180, 180, 180),grey); */
+}
+.entry{
+  width:fit-content;
+    margin: auto;
+   display: flex;
+
+}
+.left{
+    position: relative;
+    width:fit-content;
+   
+    /* background-color: #181818; */
+    margin: auto;
+    margin-right:5px ;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+  width:fit-content;
+  position: relative;
+  /* background: #000000; */
+  margin: auto;
+  margin-left: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+  label{
+    position: relative;
+  }
+  .bottom{
+    margin-top: 10px;
+    position: relative;
+   
+    width:100%;
+    margin: auto;
+   
+  }
+ 
+  .rcvr{
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    
+  }
+.insert{
+    outline: none;
+    position: relative;
+    align-items: center;
+    width: 30%;
+    border: 1px solid lightgrey;
+    box-shadow: none;
+    border-radius: 4px;
+  
+}
+.btnlast{
+    align-items: center;
+    text-align: center;
+    width:fit-content;
+    margin: auto;
+    
+}
+

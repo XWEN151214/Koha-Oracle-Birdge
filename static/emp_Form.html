@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Update Employees</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/pictures/Eakl_logo.png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <!-- Bootstrap 5 CSS file -->
+    <link rel="stylesheet" href="/static/css/supporting_files/bootstrap.min.css">
+    <!-- Bootstrap 5 JS file -->
+    <script defer src="/static/js/bootstrap.bundle.min.js"></script>
+    <!-- It only works when their is a folder 'webfonts' in the same directory -->
+    <link rel="stylesheet" href="/static/css/stud_form.css">
+</head>
+<style>
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        overflow-wrap: break-word;
+        width: fit-content;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ebd2d2;
+        min-width: 220px;
+        color: #920d0e;
+        text-align: center;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        transition: 0.5s ease-in-out;
+        left: -40px;
+    }
+
+    .dropdown-content a:hover {
+        color: #fff;
+        background-color: #920d0dbd;
+    }
+
+    .dropdown-content a {
+        color: #920d0dbd;
+        ;
+
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .navLinksName1 {
+        display: inline-block;
+        position: relative;
+        top: 16.99px;
+    }
+
+    .cont {
+        position: absolute;
+        right: 0.6rem;
+        top: 8.1rem;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="mainNavbar">
+                <div class="container px-lg-0">
+                    <div class="d-flex justify-content-between widthhundred">
+                        <div class="mainlogo">
+                            <a href="#">
+                                <img class="img-fluid" src="/static/pictures/Eakl_logo.png" alt="Mainlogo">
+                                Engr. Abul Kalam Library
+                            </a>
+                        </div>
+                        <!-- <div id="menu" class="d-block d-xl-none d-lg-none my-auto" onclick="onClickMenu()">
+                                <div class="bar" id="bar1"></div>
+                                <div class="bar" id="bar2"></div>
+                                <div class="bar" id="bar3"></div>
+                            </div> -->
+                        <!-- d-lg-block -->
+                        <div class="my-auto d-none d-lg-block" style="display: flex;">
+                            <div class="d-flex">
+                                <div class="navLinksName1 homePage " style="display: flex; top: -0.5rem;">
+                                    <a href="http://kohawebapp/EAKL/">Home</a>
+                                </div>
+
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0; "></button><a
+                                            href="#" class="dropbtn">Acquisition</a></button>
+                                        <!-- <div class="dropdown-content" >
+                                                <a href="#">Option1</a>
+                                                <a href="#">Option2</a>
+                                                <a href="#">Option3</a>
+                                            </div> -->
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0; "></button><a
+                                            href="#" class="dropbtn">Serial</a></button>
+                                        <!-- <div class="dropdown-content" >
+                                                <a href="#">Option1</a>
+                                                <a href="#">Option2</a>
+                                                <a href="#">Option3</a> -->
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0;"></button><a
+                                            href="#" class="dropbtn">Cataloging</a></button>
+                                        <div class="dropdown-content">
+                                            <a href="/patrons/rent">Plugins</a>
+                                            <!-- <a href="#">Option2</a>
+                                                <a href="#">Option3</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0;"><a href="#"
+                                                class="dropbtn">Circulation</a></button>
+                                        <div class="dropdown-content" style="max-width: 300px;">
+                                            <a href="http://kohawebapp/EAKL/addDefaulters.php">Add Defaulters</a>
+
+                                            <a href="http://kohawebapp/EAKL/clearDefaulters.php">Clear Defulters
+                                            </a>
+
+                                            <a href="http://kohawebapp/EAKL/checkOut.php"> Check Out (QR Code)</a>
+                                            <a href="/patrons/calculation"> Price Recovery</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                                <div class="dropdown">
+                                                    <button class="dropbtn" style="background: none; border: 0; ">
+                                                        <a href="#"class="dropbtn">Patrons</a>
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <a href="/patrons/insert">Add UG/PG Patrons</a>
+            
+                                                        <a href="/patrons/update">Update UG/PG Patrons
+                                                        </a>
+            
+                                                        <a href="/patrons/employees">Add/Update Employees</a>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0; left: 10px;"> <a
+                                            href="http://kohawebapp/EAKL/indexReports.php" class="dropbtn">Reports</a></button>
+                                        <!-- <div class="dropdown-content" style="left: -60px; min-width: 200px; text-align: center;">
+                                                <a href="#" >Option</a>
+                                                  
+                                                <a href="#">Option2</a>
+                                                
+                                                <a href="#">Option3</a>
+                                            </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs Section -->
+    <div>
+        <ul class="breadcrumbs m-0 up">
+            <a href="http://kohawebapp/EAKL/" class="breadcrumbs-item "
+                style="position: relative; top: -1.5px; left:-4px;">
+                <li>Home</li>
+            </a>
+
+
+            <li class="breadcrumbs-item breadcrumbs-active" style="opacity: 0;"></li>
+            <!--this is to keep the home tabe icon complete-->
+            <div class="cont">
+                <li class="breadcrumbs-item breadcrumbs-active" style="position: relative;  top: -1.5px; color: white;">
+                    <a href="/patrons/contrib" class="a"> Contributions</a> </li>
+            </div>
+        </ul>
+    </div>
+    <!-- Main Page -->
+    <main class="row main p-0">
+        <div class="message justify-content-center align-items-center" id="update-message">
+            <div class="text" id="update-text">
+
+            </div>
+            <button class="text-center btn mt-4" type="button" onclick="location.reload()" id="valid">OK</button>
+        </div>
+        <h3 class="defaultersHeading main-head fw-bold text-center py-4" style="color: #920d0e;  font-size: 2.7rem">
+            Add/Update Employees</h3>
+        <div class="container2" style="display: flex; justify-content: center ; text-align: center; margin-top: 2%; background-color: #920d0d9f; border-radius: 10px;">
+            <form action="#" style="display: flex; justify-content: center; flex-direction: column; width: 100%; color:#fff">
+                <div class="container d-flex justify-content-center align-items-center py-4"
+                    style="width: 100%; position: relative;">
+                    <label for="category" style="position: absolute; left: 6rem">Category:</label>
+                    <label for="id" style="position: absolute; right: 6rem">Enter employee ID:</label>
+                </div>
+                <div class="container d-flex justify-content-center align-items-center">
+                    <select name="category" id="category" style="position: relative; width: 50%; height: 31px;">
+                        <option value="FAC">Faculty Members</option>
+                        <option value="MOS">Member of Senate</option>
+                        <option value="NON_TCH">Non Teaching</option>
+                        <option value="S">taff</option>
+                        <option value="FAC_PHD">University Teacher / Research Scholar</option>
+                        <option value="VS_TCH">Visiting Teacher</option>
+                    </select>
+                    <input class="mx-2" type="text" placeholder="Enter Employee id" id="id"
+                        style="width: 50%; position: relative; top: -3px; height: 31px">
+                </div>
+                <div class="d-flex justify-content-center py-2">
+                    <div class="mx-2">
+                        <input name="opt" value="id" type="radio" id="radio-up" onchange="show_hide_box()">
+                        <label for="radio-up">Update</label>
+                    </div>
+                    <div class="mx-2">
+                        <input name="opt" type="radio" id="radio-in" onchange="show_hide_box()">
+                        <label for="radio-in">Insert</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center btn-s py-2" style="align-items: center;">
+                    <button class="btn mx-2" type="button" value="Submit" onclick="get_stats()" id="view-stats">View
+                        Status</button>
+                    <button class="btn mx-2" type="button" value="Submit" onclick="location.reload()" id="clear">Clear
+                        Form</button>
+                </div>
+            </form>
+        </div>
+        <div class="x-main" style="display:none" id="insert-data">
+            <form action="#" class="py-4">
+                <div class="txtarea"
+                    style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <form action="#">
+                        <h3 class="py-2">Pre Insertion Status</h3>
+                        <textarea readonly name="preStats" id="pre-response" cols="30" rows="2"
+                            class="prestats stats"></textarea>
+                        <div class="btn-s" style="align-items: center;">
+                            <button class="submit-btn btn" type="button" value="Submit"
+                                style="display:none">Insert</button>
+                        </div>
+                    </form>
+                    <h3 class="py-2">Post Insertion Status</h3>
+                    <textarea readonly name="postStats" id="post-response" cols="30" rows="2" class="poststats stats"
+                        id="poststat"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="x-main" style="display:none" id="update-data">
+            <form action="#" class="py-4">
+                <div class="container-flex txtarea"
+                    style="display: flex; align-items: center; justify-content: center;">
+                    <div class="container d-flex justify-content-center align-items-center py-2"
+                        style="flex-direction: column;">
+                        <h3 class="py-2">New Data</h3>
+                        <textarea readonly name="preStats" id="pre-response" cols="50" rows="10" class="prestats stats"
+                            style="width: 75%;"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center" style="align-items: center; flex-direction: column;">
+                        <button class="submit-btn btn" type="button" value="Submit" style="display:none">Update</button>
+                        <i class="fa fa-long-arrow-right mt-2" id="long-arrow"
+                            style="color: #920d0e; font-size: 35px; display:none"></i>
+                    </div>
+                    <div class="container d-flex justify-content-center align-items-center py-2"
+                        style="flex-direction: column;">
+                        <h3 class="py-2">Existing Data</h3>
+                        <textarea readonly name="postStats" id="post-response" cols="50" rows="10"
+                            class="poststats stats" style="width: 75%;"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container-fluid fixed-bottom footerColor p-0">
+                <div class="container">
+                    <div class="d-flex justify-content-center py-2">
+                        <div class="text-center colorWhite">
+                            <span><i class="fa-solid fa-copyright" style="color: #fff;"></i></span>
+                            <span class="copyRightText">2023 All Copy Rights reserved by</span>
+                            <span class="BottomNEDHeading">NED University</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Script for showing the dropdown -->
+        <script>
+            function onClickMenu() {
+                document.getElementById("menu").classList.toggle("icon");
+                var x = document.getElementById('myDropdown');
+                if (x.style.display === 'block') {
+                    x.style.display = 'none';
+                } else {
+                    x.style.display = 'block';
+                }
+
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+        <script src="/static/js/employees.js"></script>
+</body>
+
+</html>

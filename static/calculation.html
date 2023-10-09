@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Recovery</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/pictures/Eakl_logo.png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <!-- Bootstrap 5 CSS file -->
+    <link rel="stylesheet" href="/static/css/supporting_files/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap 5 JS file -->
+    <script defer src="/static/js/bootstrap.bundle.min.js"></script>
+    <!-- It only works when their is a folder 'webfonts' in the same directory -->
+    <link rel="stylesheet" href="/static/css/stud_form.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            overflow-wrap: break-word;
+            width: fit-content;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ebd2d2;
+            min-width: 220px;
+            color: #920d0e;
+            text-align: center;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            transition: 0.5s ease-in-out;
+            left: -40px;
+        }
+
+        .dropdown-content a:hover {
+            color: #fff;
+            background-color: #920d0dbd;
+        }
+
+        .dropdown-content a {
+            color: #920d0dbd;
+            ;
+
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .navLinksName1 {
+            display: inline-block;
+            position: relative;
+            top: 16.99px;
+        }
+
+        .cont {
+            position: absolute;
+            right: 0.6rem;
+            top: 8.1rem;
+        }
+
+        /* CSS for book recovery form  */
+        .calc {
+            background-color: #920d0da4;
+            /*background-image: linear-gradient(to bottom,rgba(214, 45, 45, 0.856),#b31717da); */
+
+
+            justify-content: center;
+            align-items: center;
+
+            color: #fff;
+            border: 1px solid black;
+            border-radius: 10px;
+            /* position: absolute; */
+            clear: both;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+        }
+
+        /* this is for the navbar */
+        .header {
+            margin-top: 0;
+            margin-bottom: auto;
+        }
+
+        /* method is the price recovery section  */
+        .method {
+            width: fit-content;
+            margin-bottom: 10px;
+            overflow: hidden;
+            margin: auto;
+            position: relative;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* this the title input in the form */
+        .right .ttl {
+            position: relative;
+        }
+
+        /* this is the edition input in the form*/
+        .left .editioni {
+            position: relative;
+        }
+
+        /* this is the css for all input with that have a textbox in the form  */
+        input[type=text] {
+            position: relative;
+            border-radius: 6px;
+            /* background-color: rgba(114, 112, 112, 0.425);
+    background-image: linear-gradient(to right, rgb(180, 180, 180),grey); */
+        }
+
+        .entry {
+            width: fit-content;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .left {
+            position: relative;
+            width: fit-content;
+
+            /* background-color: #181818; */
+            margin: auto;
+            margin-right: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right {
+            width: fit-content;
+            position: relative;
+            /* background: #000000; */
+            margin: auto;
+            margin-left: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            position: relative;
+        }
+
+        .bottom {
+            margin-top: 10px;
+            position: relative;
+
+            width: 100%;
+            margin: auto;
+
+        }
+
+        .rcvr {
+            width: fit-content;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin: auto;
+
+        }
+
+        .insert {
+            outline: none;
+            position: relative;
+            align-items: center;
+            width: 30%;
+            border: 1px solid lightgrey;
+            box-shadow: none;
+            border-radius: 4px;
+        }
+
+        .btnlast {
+            align-items: center;
+            text-align: center;
+            width: fit-content;
+            margin: auto;
+
+        }
+
+        .cont {
+            position: absolute;
+            top: 8.1rem;
+            right: 0.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="mainNavbar">
+                <div class="container px-lg-0">
+                    <div class="d-flex justify-content-between widthhundred">
+                        <div class="mainlogo">
+                            <a href="#">
+                                <img class="img-fluid" src="/static/pictures/Eakl_logo.png" alt="Mainlogo">
+                                Engr. Abul Kalam Library
+                            </a>
+                        </div>
+                        <!-- <div id="menu" class="d-block d-xl-none d-lg-none my-auto" onclick="onClickMenu()">
+                            <div class="bar" id="bar1"></div>
+                            <div class="bar" id="bar2"></div>
+                            <div class="bar" id="bar3"></div>
+                        </div> -->
+                        <!-- d-lg-block -->
+                        <div class="my-auto d-none d-lg-block" style="display: flex;">
+                            <div class="d-flex">
+                                <div class="navLinksName1 homePage " style="display: flex; top: -0.5rem;">
+                                    <a href="http://kohawebapp/EAKL/">Home</a>
+                                </div>
+
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0; "></button><a
+                                            href="#" class="dropbtn">Acquisition</a></button>
+                                        <!-- <div class="dropdown-content" >
+                                            <a href="#">Option1</a>
+                                            <a href="#">Option2</a>
+                                            <a href="#">Option3</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0; "></button><a
+                                            href="#" class="dropbtn">Serial</a></button>
+                                        <!-- <div class="dropdown-content" >
+                                            <a href="#">Option1</a>
+                                            <a href="#">Option2</a>
+                                            <a href="#">Option3</a> -->
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0;"></button><a
+                                            href="#" class="dropbtn">Cataloging</a></button>
+                                        <div class="dropdown-content">
+                                            <a href="/patrons/rent">Plugins</a>
+                                            <!-- <a href="#">Option2</a>
+                                            <a href="#">Option3</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0;"><a href="#"
+                                                class="dropbtn">Circulation</a></button>
+                                        <div class="dropdown-content" style="max-width: 120px;">
+                                            <a href="http://kohawebapp/EAKL/addDefaulters.php">Add Defaulters</a>
+
+                                            <a href="http://kohawebapp/EAKL/clearDefaulters.php">Clear Defulters
+                                            </a>
+
+                                            <a href="http://kohawebapp/EAKL/checkOut.php"> Check Out (QR Code)</a>
+                                            <a href="/patrons/calculation"> Price Recovery</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                            <div class="dropdown">
+                                                <button class="dropbtn" style="background: none; border: 0; "> <a href="#"
+                                                            class="dropbtn">Patrons</a></button>
+                                                    <div class="dropdown-content" style="width: 120px;">
+                                                        <a href="/patrons/insert">Add UG/PG Patrons</a>
+            
+                                                        <a href="/patrons/update">Update UG/PG Patrons
+                                                        </a>
+            
+                                                        <a href="/patrons/employees">Add/Update Employees</a>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0; left: 10px;"> <a
+                                            href="http://kohawebapp/EAKL/indexReports.php"class="dropbtn">Reports</a></button>
+                                        <!-- <div class="dropdown-content" style="left: -60px; min-width: 200px; text-align: center;">
+                                            <a href="#" >Option</a>
+                                              
+                                            <a href="#">Option2</a>
+                                            
+                                            <a href="#">Option3</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs Section -->
+    <div>
+        <ul class="breadcrumbs m-0 up">
+            <a href="http://kohawebapp/EAKL/" class="breadcrumbs-item "
+                style="position: relative; top: -1.5px; left:-4px;">
+                <li>Home</li>
+            </a>
+
+
+            <li class="breadcrumbs-item breadcrumbs-active" style="opacity: 0;"></li>
+            <!--this is to keep the home tabe icon complete-->
+            <div class="cont">
+                <li class="breadcrumbs-item breadcrumbs-active" style="position: relative;  top: -1.5px;"><a
+                        href="/patrons/contrib" class="a"> Contributions</a> </li>
+            </div>
+        </ul>
+    </div>
+
+    <!-- Main Page -->
+    <main class="row main p-0" style="justify-content: center; align-items: center;">
+
+        <div class="header mt-4" style="position: relative; ">
+            <!-- This is where you can apply the heading on the page currently PRICE RECOVERY FORM -->
+            <h3 class="defaultersHeading head text-center" style="font-size: 35px; ">PRICE RECOVERY FORM</h3>
+        </div>
+        <div class="alert p-0 m-0" id="message">
+            <p class="text" id="text"></p>
+        </div>
+        <!-- This is the division that contains the whole form -->
+        <div class="calc" style="width: 65%;">
+            <!--Change height and width from here and any other changes can be made in the .cal section in contribution.css (css file)-->
+            <!-- this sub-division below has the four attributes account number, title, Edition and author -->
+            <div class="entry">
+
+                <div class="container d-flex justify-content-center align-items-center py-2" style="flex-direction: column;">
+                    <!-- this grandchild division consist of the left side attributes account number and Edition -->
+                    <div class="py-2">
+                        <label for="Acce-no" class="acce text-center">Acc No</label><br>
+                        <input type="text" id="acce-no" name="acce-no" style="border: 0;" class="accei">
+                    </div>
+                    <div>
+                        <label for="method" class="mth">Price Recovery Method</label>
+                    </div>
+                    <div class="method d-flex align-items-center" style="width: fit-content"> 
+                        <!-- this division contains the price recovery section and radio select options -->
+                        <div class="py-2 mx-4"> 
+                            <input type="radio" id="mth-1" class="mth2" name="method" value="out of print">
+                            <label for="out">Out Of Print</label>    
+                            <!-- <button class="insert p-1 m-0" style="width:max-content;" id="submit-acc">Out Of Print</button> -->
+                        </div>
+                        <div class="py-2 mx-4">
+                            <input type="radio" class="market" id="mth-2" name="method" value="market price">
+                            <label for="market-price">Market Price</label>
+                            <input type="text" id="market-price" class="mm pt-2" style="display:none; margin:auto; width:170px; outline:none;"><br>
+                            <button class="insert p-1 mx-2" style="width:70px; display:none" id="submit-form">GET</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container d-flex mx-2 w-100">
+                    <!-- this grandchild division contains the right attributes of entry division i.e. title and author  -->
+                    <!-- this readonly input attribute will get the respected values from database -->
+                    <div class="py-2 mx-3" style="width: 60%;">
+                        <label for="Title">Title</label><br>
+                        <input type="text" id="title" readonly style="outline: none; width: 100%" class="ttl">
+                    </div>
+                    <div class="py-2 mx-3" style="width: 15%">
+                        <label for="edition" class="edition">Edition</label>
+                        <!--class edition = class for editiion label -->
+                        <!-- this readonly input attribute will get the respected values from database -->
+                        <input type="text" id="edition" readonly style="outline: none; width: 100%" class="editioni">
+                    </div>
+                    <div class="py-2 mx-3" style="width: 15%">
+                         <!--class ttl = class for title input-->
+                    <label for="author">Author</label>
+                    <!-- this readonly input attribute will get the respected values from database -->
+                    <input type="text" id="author" readonly style="outline: none; width: 100%" class="athr">
+                    <!--class ttl = class for author input-->
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <!-- class bottom consist of the bottom attributes such as cost, stock tyoe and procurement year
+            any changes in css is recommended to be applied here or you can make classes and apply it in css file -->
+                <label for="cost" style="justify-content: center; align-items: center; margin-left: 130px;">Cost of
+                    Book(Rs)</label>
+
+                <label for="stock type" style="justify-content: center; align-items: center;margin-left: 90px; ">Stock
+                    Type</label>
+
+                <label for="procurement year"
+                    style="justify-content: center; align-items: center; margin-left: 100px;">Procurement Year</label>
+
+                <br>
+
+                <input type="text" readonly
+                    style="outline: none; width: 20%; justify-content: center; align-items: center; margin-left: 110px;"
+                    id="cost-span">
+
+                <input type="text" readonly
+                    style="outline: none; width: 20%; justify-content: center; align-items: center;margin-left: 50px;"
+                    id="stock-type">
+
+                <input type="text" readonly
+                    style="outline: none; width: 20%; justify-content: center; align-items: center;margin-left: 50px; "
+                    id="procurement-year">
+
+            </div>
+            <div class="rcvr">
+                <!-- this division contains the recovered price where the data fetched through the function will be inserted here  -->
+                <label for="recovery price">Recovery Price</label>
+                <br>
+                <input type="text" readonly id="price" style="width:210px; border-radius: 3px; border: none; outline: none;">
+            </div>
+            <div class="btnlast d-flex justify-content-center align-items-center mt-2 py-2">
+                <!-- this button will call the function that will insert the price into the database -->
+                <button class="mx-2 mt-0" style="width:70px; border-radius: 4px;" onclick="location.reload()">clear</button>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid footerColor p-0">
+            <div class="container">
+                <div class="d-flex justify-content-center py-2">
+                    <div class="text-center colorWhite">
+                        <span><i class="fa-solid fa-copyright" style="color: #fff;"></i></span>
+                        <span class="copyRightText">2023 All Copy Rights reserved by</span>
+                        <span class="BottomNEDHeading">NED University</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+<script src="/static/js/calculation.js"></script>
+
+</html>

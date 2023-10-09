@@ -1,0 +1,34 @@
+--Node
+	--contollers
+		emp_ctrl.js: Contains functions regarding employee views (Not important)
+		forms_ctrl.js: Contains functions which are responsible for retrieving data regarding items and biblios, calling sql functions to retrieve the rent (calls to Koha URL and MySQL functions)
+		front_ctrl.js: Contains functions regarding the frontend pages views (Not important)
+		patrons_ctr.js: Contains functions regarding patron update and insert views (Not important)
+
+	--data
+		format.js: This file contains functions which take care of the data formatting that we retrive from the database
+
+	--errors
+		handle.js: It runs validation on the data to check if the data is valid or not
+
+	--middleware   (calls to Koha URL)
+		emp_mid.js: Responsible for handling update and insert operations for the employees. Sends requests to the Koha api and handles the response
+		patrons_mid.js: Responsible for handling update and insert operations for the patrons. Sends requests to the Koha api and handles the response
+
+	--node_modules: (Not important)
+
+	--oracle
+		data.js: Establishes the connection with the oracle database, selects the required query and executes it returning the result
+
+	--routes: All files contain the endpoints/url that are being called on the application (Not important)
+
+	--static: Contain all the HTML,CSS and JS files for the frontend
+
+	index.js: Running the server (DO NOT TOUCH)
+	
+	package_lock.json: (Not important)
+
+	pacjage.json: (Not important)
+
+Node Version: v18.16.0
+Instant Client Version: 21.10

@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.widthhundred{
+    width: 100%;
+}
+
+.heighthundred{
+    height: 100%;
+}
+
+.colorWhite{
+    color: white;
+}
+
+/* NavBar lite header CSS start */
+
+
+/* Main NavBar CSS Start */
+/* header{
+    margin-bottom: 2rem;
+} */
+
+
+.mainNavbar{
+    padding: 1.25rem 0rem !important;
+    border-bottom: 1px solid #fff;
+    background: #ADA996;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to bottom, #c54040, #b70d0d, #cb1a1a, #1f03d3); */
+    background: linear-gradient(to top, #920d0e, #920d0e30, #920d0e30, #920d0e);
+}
+
+.mainlogo img{
+    width: 5.25rem;
+}
+
+.mainlogo a{
+    text-decoration: none;
+    color: #920d0e;
+    font-size: 2.1rem;
+    font-family: 'Lobster', cursive;
+}
+.mainlogo a:hover{
+    color: #920d0e;
+}
+
+.navLinksName1 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* padding: 0rem 1rem; */
+    margin: 0rem 10px;
+    margin-top: 1rem;
+    font-family: 'Poppins', sans-serif; 
+
+}
+.navLinksName1 a:hover{
+    color: #920d0e;
+}
+
+.homePage a{
+    color: #973930;
+}
+
+.loginLink1 a{
+    /* margin-right: 0.5rem; */
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+}
+.loginLink1 a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+.registerButton1 a{
+    border: 1px solid #94bb44;
+    padding: 0.5rem 8px;
+    background-color: #94bb44;
+    color: #fff;
+}
+
+.registerButton1 a:hover{
+    background-color: #fff;
+    color: #94bb44;
+    border: 2px solid #94bb44;
+    padding: 0.5rem 7px;
+}
+
+/* Inside header.css */
+
+/* Style for the dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebd2d2;
+    min-width: 160px;
+    z-index: 1;
+    color: #920d0e
+}
+
+
+/* dropdown in navbar */
+/* Inside header.css */
+
+/* Style for the dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 125px;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 5%;
+    padding: 10px;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+/* Style for the dropdown links */
+.dropdown-content a {
+    color: #920d0e;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    margin: 0;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #920d0dbd;
+    color: #fff
+    /* background-color: #f2f2f2; */
+}
+
+/* dropdown in navbar */
+
+
+/* Main NavBar CSS end */
+
+
+/* Toggle Menu Icon Start */
+#menu{
+    width: 30px;
+    height: 100%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.bar{
+    height: 5px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+#bar1{
+    transform: translateY(-4px);
+}
+#bar3{
+    transform: translateY(4px);
+}
+
+.icon .bar{
+    background-color: #fff;
+}
+
+.icon #bar1{
+    transform: translateY(4px) rotate(-45deg);
+}
+
+.icon #bar3{
+    transform: translateY(-4px) rotate(45deg);
+}
+
+.icon #bar2{
+    opacity: 0;
+}
+/* Toggle Menu icon end  */
+
+/* DropDown Start */
+.dd-height{
+    /* height: 80vh; */
+    /* position: absolute; */
+    /* top: 104px; */
+    /* z-index: 99; */
+    /* width: 1292px; */
+    background-color: #014548;   
+}
+
+
+.navLinksName2{
+    padding: 0.75rem 0;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1px solid grey;
+    text-align: center;
+    margin: 0 1rem
+}
+
+.navLinksName2:hover{
+    margin: 0 !important;
+    color: #94bb44;
+}
+
+.dd-links a{
+    text-decoration: none;
+}
+
+.dd-links:hover{
+    margin: 0 1rem;
+    box-shadow: 0px 0px 10px #888888;
+    background-color: #014548;
+}
+
+.registerButton2{
+    border: 1px solid #94bb44;
+    padding: 0.7rem 8px;
+    background-color: #94bb44;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+.registerButton2:hover{
+    background-color: #7ba327;
+    border: 1px solid #7ba327;
+}
+
+.dd-buttons a{
+    text-decoration: none;
+}
+.loginButton2{
+    border: 2px solid #94bb44;
+    padding: 11px 8px;
+    background-color: #fff;
+    color: #94bb44;
+    text-align: center;
+    font-weight: 600;
+}
+.loginButton2:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.dd-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #004a4d;
+    padding: 16px;
+}
+.mydd{
+    display: none;
+}
+
+/* DropDown End */
+
+
+/* Form CSS */
+.input_box{
+    /* padding: 1rem; */
+    padding-bottom: 0px; 
+    padding-right: 0px;
+    position: relative;
+}
+
+.input_box input{
+    font-size: 15px;
+    padding: 8px 10px;
+    display:block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #999;
+    font-weight: 500;
+    color: #222;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    background: transparent;
+}
+.input_box textarea{
+    font-size: 15px;
+    padding: 8px 10px;
+    display:block;
+    width: 100%;
+    border: 1px solid #999;
+    font-weight: 500;
+    color: #222;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.input_box input::placeholder{
+    visibility: hidden;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: .5px;
+}
+.input_box textarea::placeholder{
+    visibility: hidden;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: .5px;
+}
+
+.input_box input:focus{
+    outline: none;
+    border: 1px solid #7ba327;
+    box-shadow: inset 0px 0px 7px #94bb44;
+    color: #222;  
+}
+.input_box textarea:focus{
+    outline: none;
+    border: 1px solid #002a66;
+    box-shadow: inset 0px 0px 5px #002a66 ;
+    color: #222;  
+}
+
+.input_box input:focus::placeholder{
+    visibility: visible;
+    color: #050505;
+}
+.input_box textarea:focus::placeholder{
+    visibility: visible;
+    color: #050505;
+}
+
+.input-label{
+    color: #555;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 9px;
+    letter-spacing: .5px;
+    padding: 0px 5px;
+    /* transition: .2s; */
+    background: #fff;
+}
+.textarea-label{
+    color: #555;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 22px;
+    top: 25px;
+    letter-spacing: .5px;
+    padding: 0px 5px;
+    transition: .2s;
+    background: #fff;
+}
+
+.input_box input:focus ~ .input-label,
+.input_box input:valid ~ .input-label{
+    top: -10px;
+    left: 5px;
+    font-size: 13px;
+    color: #7ba327;
+    font-weight: 500;
+}
+.input_box textarea:focus ~ .textarea-label{
+    top: 8px;
+    left: 24px;
+    font-size: 12px;
+    color: #7ba327;
+    font-weight: 500;
+}
+
+.submit-btn button{
+    margin: 1rem;
+    color: #002a66;
+    font-weight: 500;
+    background-color: white;
+    padding: 5px 10px;
+    border: 2px solid #002a66;
+    border-radius: 8px;
+}
+.submit-btn button:hover{
+    color: #fff;
+    font-weight: 500;
+    background-color: #002a66;
+    padding: 5px 10px;
+    border: 2px solid #002a66;
+    border-radius: 8px;
+}
+/* Form CSS end */
+
+
+
+
+
+
+/* Media Queries for responsiveness */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 300px) {
+    .dd-height{
+        width: 88%;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .dd-height{
+        width: 93%;
+    }
+
+    .bar{
+        height: 3.5px;
+        width: 75%;
+    }
+}
+@media only screen  and (max-width: 575px) {
+    .button{
+        width: 145px;
+    }
+    .dd-height{
+        width: 95%;
+    }
+
+    .bar{
+        height: 4px;
+        width: 80%;
+    }
+
+    .mainlogo img{
+        width: 14rem;
+    }
+
+    .footerAboutIcons a{
+        font-size: 1.25rem;
+    }
+    .fontInFooter{
+        font-size: 1rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    .SIL-heading h1{
+        font-size: 1rem;
+    }
+    .button{
+        width: 155px;
+    }
+
+    .dd-height{
+        width: 512px;
+    }
+    
+    .bar{
+        height: 4px;
+        width: 90%;
+    }
+
+    .mainlogo img{
+        width: 14rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .button{
+        width: 165px;
+    }
+
+    .dd-height{
+        width: 692px;
+    }
+
+
+    .mainlogo img{
+        width: 14rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .navLinksName a{
+        padding: 0rem 0.8rem;
+    }
+    .loginLink1 a{
+        padding: 0rem 0.6rem;
+    }
+
+
+    .registerButton1 a{
+        padding: 0.5rem 8px;
+    }
+
+    .dd-height{
+        width: 	932px;
+    }
+
+    .mainlogo img{
+        width: 15rem;
+    }
+
+    .navLinksName1 a{
+        margin: 0rem 0.75rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .dd-height{
+        width: 1118px;
+    }
+}
+a{
+    text-decoration: none;
+    
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+overflow-wrap: break-word;
+width: fit-content;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #920d0e;
+min-width: 250px;
+color: #fff;
+text-align: center;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+transition: 0.5s ease-in-out;
+left: -55px;
+}
+.dropdown-content a:hover{
+color: #000;
+}
+.dropdown-content a{
+color: #fff;
+
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.navLinksName1{
+display: inline-block;
+position: relative;
+top: 13.99px;
+}
+.a{
+    color: white;
+    text-decoration: none;
+}
+.cont{
+    position: absolute;
+    top: 8.1rem;
+    right: 0.6rem;
+   
+}

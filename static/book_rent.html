@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Rent</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/pictures/Eakl_logo.png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/calculation.css">
+    <link rel="stylesheet" href="/static/css/rent.css">
+    <!-- Bootstrap 5 CSS file -->
+    <link rel="stylesheet" href="/static/css/supporting_files/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap 5 JS file -->
+    <script defer src="/static/js/bootstrap.bundle.min.js"></script>
+    <!-- It only works when their is a folder 'webfonts' in the same directory -->
+    <link rel="stylesheet" href="/static/css/stud_form.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            overflow-wrap: break-word;
+            width: fit-content;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ebd2d2;
+            min-width: 220px;
+            color: #920d0e;
+            text-align: center;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            transition: 0.5s ease-in-out;
+            left: -40px;
+        }
+
+        .dropdown-content a:hover {
+            color: #fff;
+            background-color: #920d0dbd;
+        }
+
+        .dropdown-content a {
+            color: #920d0dbd;
+            ;
+
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .navLinksName1 {
+            display: inline-block;
+            position: relative;
+            top: 16.99px;
+        }
+
+        .cont {
+            position: absolute;
+            right: 0.6rem;
+            top: 8.1rem;
+        }
+
+        .left2{
+          width: 30%;
+        }
+        .calc2{
+            width:40%;
+            /* display:none; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="mainNavbar">
+                <div class="container px-lg-0">
+                    <div class="d-flex justify-content-between widthhundred">
+                        <div class="mainlogo">
+                            <a href="#">
+                                <img class="img-fluid" src="/static/pictures/Eakl_logo.png" alt="Mainlogo">
+                                Engr. Abul Kalam Library
+                            </a>
+                        </div>
+                        <!-- <div id="menu" class="d-block d-xl-none d-lg-none my-auto" onclick="onClickMenu()">
+                            <div class="bar" id="bar1"></div>
+                            <div class="bar" id="bar2"></div>
+                            <div class="bar" id="bar3"></div>
+                        </div> -->
+                        <!-- d-lg-block -->
+                        <div class="my-auto d-none d-lg-block" style="display: flex;">
+                            <div class="d-flex">
+                                <div class="navLinksName1 homePage " style="display: flex; top: -0.5rem;">
+                                    <a href="http://kohawebapp/EAKL/">Home</a>
+                                </div>
+
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0; "></button><a
+                                            href="#" class="dropbtn">Acquisition</a></button>
+                                        <!-- <div class="dropdown-content" >
+                                            <a href="#">Option1</a>
+                                            <a href="#">Option2</a>
+                                            <a href="#">Option3</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0; "></button><a
+                                            href="#" class="dropbtn">Serial</a></button>
+                                        <!-- <div class="dropdown-content" >
+                                            <a href="#">Option1</a>
+                                            <a href="#">Option2</a>
+                                            <a href="#">Option3</a> -->
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0;"></button><a
+                                            href="#" class="dropbtn">Cataloging</a></button>
+                                        <div class="dropdown-content">
+                                            <a href="#">Plugins</a>
+                                            <!-- <a href="#">Option2</a>
+                                            <a href="#">Option3</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0;"><a href="#"
+                                                class="dropbtn">Circulation</a></button>
+                                        <div class="dropdown-content" style="max-width: 300px;">
+                                            <a href="http://kohawebapp/EAKL/addDefaulters.php">Add Defaulters</a>
+
+                                            <a href="http://kohawebapp/EAKL/clearDefaulters.php">Clear Defulters
+                                            </a>
+
+                                            <a href="http://kohawebapp/EAKL/checkOut.php"> Check Out (QR Code)</a>
+                                            <a href="/patrons/calculation"> Price Recovery</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                                <div class="dropdown">
+                                                    <button class="dropbtn" style="background: none; border: 0; "> <a href="#"
+                                                            class="dropbtn">Patrons</a></button>
+                                                    <div class="dropdown-content">
+                                                        <a href="/patrons/insert">Add UG/PG Patrons</a>
+            
+                                                        <a href="/patrons/update">Update UG/PG Patrons
+                                                        </a>
+            
+                                                        <a href="/patrons/employees">Add/Update Employees</a>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="navLinksName1" style="position: relative; top: 8px;">
+                                    <div class="dropdown">
+                                        <button class="dropbtn" style="background: none; border: 0; left: 10px;"> <a
+                                            href="http://kohawebapp/EAKL/indexReports.php" class="dropbtn">Reports</a></button>
+                                        <!-- <div class="dropdown-content" style="left: -60px; min-width: 200px; text-align: center;">
+                                            <a href="#" >Option</a>
+                                              
+                                            <a href="#">Option2</a>
+                                            
+                                            <a href="#">Option3</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Breadcrumbs Section -->
+            <div>
+                <ul class="breadcrumbs m-0 up">
+                    <a href="http://kohawebapp/EAKL/" class="breadcrumbs-item "
+                        style="position: relative; top: -1.5px; left:-4px;">
+                        <li>Home</li>
+                    </a>
+
+
+                    <li class="breadcrumbs-item breadcrumbs-active" style="opacity: 0;"></li>
+                    <!--this is to keep the home tabe icon complete-->
+                    <div class="cont">
+                        <li class="breadcrumbs-item breadcrumbs-active" style="position: relative;  top: -1.5px;">
+                            <a href="/patrons/contrib" class="a"> Contributions</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main class="row main p-0" style="justify-content: center; text-align: center;">
+        <div class="header mt-4" style="position: relative; ">
+            <!-- This is where you can apply the heading on the page currently PRICE RECOVERY FORM -->
+            <h3 class="defaultersHeading head text-center" style="font-size: 50px; ">Plugins</h3>
+        </div>
+        <!-- this is the form for rent books  -->
+
+        <div class="rent-form p-0">
+            <!-- Main Page -->
+    <main class="row main p-0" style="justify-content: center; align-items: center; flex-direction: column;">
+
+       
+        <div class="left2" style="border-radius: 10px;">
+            <input type="radio" checked class="form" name="form" id="new"><label for="New Title">Rent of New Title</label>
+            <br>
+            <input type="radio" class="form" name="form" id="ext"><label for="existing title">Rent of Exisiting Title</label>
+            <br>
+            <input type="radio" class="form" name="form" id="lst-serial"><label for="existing title">Last Serial Code</label>
+        </div>
+        <div class="alert" id="message">
+            <p class="text" id="text"></p>
+        </div>
+        <!-- This is the division that contains the whole form -->
+        <div class="calc calc1" style="width: 65%; display: none; ">
+            <!--Change height and width from here and any other changes can be made in the .cal section in contribution.css (css file)-->
+            <!-- this sub-division below has the four attributes account number, title, Edition and author -->
+            <div class="entry">
+
+                <div class="left py-2 mx-2">
+                    <!-- this grandchild division consist of the left side attributes account number and Edition -->
+                    <div class="py-2">
+                        <label for="Acce-no text-center" class="acce">Acc No</label><br>
+                        <input type="text" id="acc-no" name="acce-no" class="acc-no" style="border: 0;" class="accei">
+                        <button class="submit p-0 m-0 mx-1" style="width:70px; border-radius: 4px;"i d="submit-form">GET</button>
+                    </div>
+                    <!--class accei = class for account input -->
+                    <label for="edition" class="edition">Edition</label><br>
+                    <!--class edition = class for editiion label -->
+                    <!-- this readonly input attribute will get the respected values from database -->
+                    <input type="text" id="edition" readonly style="outline: none; width:100%" class="editioni">
+                    <!--class edition = class for editiion input -->
+                </div>
+
+                <div class="right py-2 mx-2">
+                    <!-- this grandchild division contains the right attributes of entry division i.e. title and author  -->
+                    <!-- this readonly input attribute will get the respected values from database -->
+                    <div class="py-2">
+                        <label for="Title">Title</label><br>
+                        <input type="text" id="title" class="title" readonly style="outline: none; width: 100%" class="ttl">
+                    </div>
+                    <!--class ttl = class for title input-->
+                    <label for="author">Author</label><br>
+                    <!-- this readonly input attribute will get the respected values from database -->
+                    <input type="text" id="author" readonly style="outline: none; width:100%" class="athr">
+                    <!--class ttl = class for author input-->
+                </div>
+            </div>
+            <div class="bottom">
+                <!-- class bottom consist of the bottom attributes such as cost, stock tyoe and procurement year
+            any changes in css is recommended to be applied here or you can make classes and apply it in css file -->
+                <label for="cost" style="justify-content: center; align-items: center; position: relative; left: -5rem;">Cost of
+                    Book(Rs)</label>
+
+                <label for="stock type" style="justify-content: center; align-items: center; position: relative; left: -2rem; ">Stock
+                    Type</label>
+
+                <label for="call-no"
+                    style="justify-content: center; align-items: center;  position: relative; left: 4rem;">Call no</label>
+
+                <br>
+
+                <input type="text" readonly
+                    style="outline: none; width: 20%; justify-content: center; align-items: center; "
+                    id="cost-span">
+
+                <input type="text" readonly
+                    style="outline: none; width: 20%; justify-content: center; align-items: center;"
+                    id="stock-type">
+
+                <input type="text" readonly
+                    style="outline: none; width: 20%; justify-content: center; align-items: center;"
+                    id="call-no">
+
+            </div>
+            <div class="rcvr">
+                <!-- this division contains the recovered price where the data fetched through the function will be inserted here  -->
+                <label for="recovery price">Rent</label>
+                <br>
+                <input class="rent-i" type="text" readonly id="price" style="width:210px; border-radius: 3px; border: none; outline: none;">
+            </div>
+            <div class="btnlast d-flex justify-content-center align-items-center">
+                <!-- this button will call the function that will insert the price into the database -->
+                <!-- <button class="submit my-2 mx-2" style="width:70px; border-radius: 4px;" id="submit-form">submit</button> -->
+                <button class="my-2 mx-2" style="width:70px; border-radius: 4px;" onclick="reset_form(false, true, false)">clear</button>
+            </div>
+
+        </div>
+        <div class="calc calc2">
+                <p class="mt-2">Enter Cost in Cost text box attain the Book Rent according to Library Regulations</p>
+                <div>
+                    <div>
+                        <label for="cost" class="cost" style="margin-top: 11px;">Cost</label><br>
+                        <input type="text" class="cost-i" id="cost" style="margin-top: 5px;">
+                    </div>
+                    <button class="submit my-2 mx-2" style="width:70px; border-radius: 4px;" id="submit-form">submit</button>
+                </div>
+                <label for="rent" class="rent" style="margin-top: 11px;">Rent</label>
+                <br>
+                <input type="text" class="rent-i" readonly style="margin-top: 5px; margin-bottom: 15px;"><br>
+                <div class="btnlast d-flex justify-content-center align-items-center">
+                    <button class="my-2 mx-2" style="width:70px; border-radius: 4px;" onclick="reset_form(true, false, false)">clear</button>
+                </div>
+        </div>
+
+        <div class="calc calc3" style="width: 65%; display: none;">
+            <div class="d-flex justify-content-center align-items-center pt-2">
+                <div class="px-2">
+                    <label for="Acce-no text-center" class="acce">Last Acc No</label><br>
+                    <input type="text" id="acc-no" class="acc-no" name="acce-no" style="border: 0;" class="accei">
+                </div>
+                <div class="px-2">
+                    <label for="Title">Title</label><br>
+                    <input type="text" id="title" class="title" readonly style="outline: none; " class="ttl">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center pt-2">
+                <div class="px-2">
+                    <label for="serial-issue text-center">Serial Issue</label><br>
+                    <input type="text" id="serial-issue" name="serial-issue" style="border: 0;" class="accei">
+                </div>
+                <div class="px-2">
+                    <label for="Title">Acquisiton Date</label><br>
+                    <input type="text" readonly
+                    style="outline: none;  justify-content: center; align-items: center;margin-left: 50px; "
+                    id="procurement-year" class="procurement-year">
+                </div>
+            </div>
+            <button class="submit my-2 mx-2 p-1" style="width:max-content; border-radius: 4px;" id="submit-serial">Get Next Serial</button>
+            <div class="d-flex justify-content-center align-items-center pt-2">
+                <div class="px-2">
+                    <label for="serial text-center">Next Serial Number</label><br>
+                    <input type="text" id="serial" name="serial" style="border: 0;" class="accei">
+                </div>
+            </div>
+            <div class="btnlast d-flex justify-content-center align-items-center">
+                <button class="my-2 mx-2" style="width:70px; border-radius: 4px;" onclick="reset_form(false, false, true)">clear</button>
+            </div>
+    </div>
+
+    </main>
+ 
+            <!--
+           
+
+            <div class="bottom option ">
+                <label for="New Books" style="width: 100%; background-color: #920d0e; color: #fff;">Exisiting
+                    Title</label><br>
+                <p class="mt-2">Enter a BiblioNumber of the set of books to attain a minimum cost and rent of the Book according to
+                    Library Regulations</p>
+                <div class="row  d-flex justify-content-center">
+                    <label for="acc-no">Acc No</label>
+                    <input type="text" style="width: 200px" id="acc-no">
+                </div>
+                <div class="container d-flex justify-content-center align-items-center py-2 px-0 mx-0 mt-2">
+                    <div class="container d-flex justify-content-center" style="flex-direction: column; margin-left: 10px;">
+                        <label class="text-center" for="Title" style="width: 310px;">Title</label>
+                        <input type="text" readonly style="width: 310px;" id="title">
+                    </div>
+                    <div class="col-lg-3" >
+                        <label class="text-center" for="Edition">Edition</label>
+                        <input type="text" readonly style="width:100px;" id="edition">
+                    </div>
+                    <div class="col-lg-2" style="padding-right: 1rem;">
+                        <label  for="call-no">Call No</label>
+                        <input type="text" readonly style="width:90px;" id="call-no">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-2">
+                    <label for="rent" class="rent" style="left: 84px;">Rent</label>
+                    <input type="text" class="rent-i" id="rent" readonly style="width: 200px">
+                </div>
+                <button class="clear mt-2 px-2 py-2" id="clear">Clear</button>
+            </div>
+        </div> -->
+
+        <footer>
+            <div class="container-fluid footerColor p-0">
+                <div class="container">
+                    <div class="d-flex justify-content-center py-2">
+                        <div class="text-center colorWhite">
+                            <span><i class="fa-solid fa-copyright" style="color: #fff;"></i></span>
+                            <span class="copyRightText">2023 All Copy Rights reserved by</span>
+                            <span class="BottomNEDHeading">NED University</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+        <script src="/static/js/rent.js"></script>
+    </main>
+</body>
+
+</html>
